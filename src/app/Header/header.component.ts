@@ -31,6 +31,10 @@ export class HeaderComponent implements OnInit {
         }
   
         getGallery() {
+          if (this.findForm.trim() === '') {
+            alert('Enter the name of image');
+            return
+        }
           return this.response[this.findForm].image
         }
   
