@@ -20,7 +20,8 @@ export class HeaderComponent implements OnInit {
         };
   
         search() {
-          this.http.get('https://api.thecatapi.com/v1/images/search?limit=10').subscribe((cat: any) => {
+          const APIKEY = 'e644a991-0319-4b39-840f-08c4781bc4ad';
+          this.http.get('https://api.thecatapi.com/v1/images/search?breed_id=beng').subscribe((cat: any) => {
             return this.response = {
               id: cat.id,
               url: cat.url,
