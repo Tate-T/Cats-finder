@@ -1,18 +1,18 @@
 // import { NgModule } from '@angular/core';
 // import { BrowserModule } from '@angular/platform-browser';
 
-// import { FinderComponent } from './finder.component'; 
+// import { HeaderComponent } from './header.component'; 
 // import { HttpClientModule } from '@angular/common/http';
 // // import {ConverterRoutingModule} ?
 // @NgModule({
 //   declarations: [
-//     FinderComponent
+//     HeaderComponent
 //   ],
 //   imports: [
 //     BrowserModule,
 //     HttpClientModule,
 //   ],
 //   providers: [],
-//   bootstrap: [FinderComponent]
+//   bootstrap: [HeaderComponent]
 // })
-// export class FinderModule { }
+// export class HeaderModule { }

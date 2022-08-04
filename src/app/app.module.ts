@@ -10,7 +10,7 @@ import { FinderComponent} from './Finder/finder.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FinderComponent
+    FinderComponent,
   ],
   imports: [
     BrowserModule,

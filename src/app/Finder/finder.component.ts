@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core"; 
-import { HttpClient } from '@angular/common/http';
+import { Component } from "@angular/core"; 
+// import { Component, OnInit } from "@angular/core"; 
+// import { HttpClient } from '@angular/common/http';
 
 // import rates from "../../data/data.json";
 
@@ -12,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 
-export class ConverterComponent {
+export class FinderComponent {
 
     // constructor(private http: HttpClient) { }
 
