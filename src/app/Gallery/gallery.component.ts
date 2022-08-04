@@ -5,15 +5,15 @@ import { Component } from "@angular/core";
 // import rates from "../../data/data.json";
 
 @Component({
-    selector: 'app-finder',
-    templateUrl: './finder.component.html',
-    styleUrls: ['./finder.component.css'],
+    selector: 'app-gallery',
+    templateUrl: './gallery.component.html',
+    styleUrls: ['./gallery.component.css'],
     // interpolation: ['{{', '}}']
 })
 
 
 
-export class FinderComponent {
+export class GalleryComponent {
 
     // constructor(private http: HttpClient) { }
 

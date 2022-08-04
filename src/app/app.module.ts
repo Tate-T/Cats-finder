@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/header.component';
-import { FinderComponent} from './Finder/finder.component';
+import { GalleryComponent} from './Gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FinderComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
