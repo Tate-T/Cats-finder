@@ -2,9 +2,10 @@
     <h1 class="title">CATS FINDER</h1>
     <form class="form" submit="handleSubmit()">
         <select class="inputCatBreed">
+            <!-- <select [(ngModel)]="findForm" class="inputCatBreed"> -->
             <option class="inputSelect" value="">select breed</option>
-            <option class="inputBreed" value="breed1">breed1</option>
-            <option class="inputBreed" value="breed2">breed2</option>
+            <option class="inputBreed" value="breed1">{{response.cat.id}}</option>
+            <option class="inputBreed" value="breed2">{{response.cat.id}}</option>
         </select>
         <button type="submit" class="button">
             <!-- find -->
@@ -12,3 +13,6 @@
         </button>
     </form>
 </header>
+
+
+<router-outlet></router-outlet>

@@ -7,4 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cats-finder';
-}
+
+  }
+
+    // const handleKeyDown = useCallback(
+    //     e => {
+    //         if (e.code === 'Escape') {
+    //             onClose()
+    //         }
+    //     },
+    //     [onClose],
+    // )
+
+    // useEffect(() => {
+    //     window.addEventListener("keydown", handleKeyDown)
+    //     return () => {
+    //         window.removeEventListener('keydown', handleKeyDown)
+    //     }
+    // }, [handleKeyDown])
+
+    // const handleBackDropClick = (e) => {
+    //     if (e.currentTarget === e.target) {
+    //         onClose();
+    //     }
+    // };
