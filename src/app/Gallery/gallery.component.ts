@@ -14,7 +14,7 @@ import { Component } from "@angular/core";
 
 
 export class GalleryComponent {
-
+    response: any
     // constructor(private http: HttpClient) { }
 
     
