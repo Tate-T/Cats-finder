@@ -1,18 +1,14 @@
 <header class="searchbar">
     <h1 class="title">CATS FINDER</h1>
-    <form class="form" submit="handleSubmit()">
+    <form class="form" submit="ngOnInit()">
         <select class="inputCatBreed">
-            <!-- <select [(ngModel)]="findForm" class="inputCatBreed"> -->
+            <!-- <select (change)="search()" class="inputCatBreed"> -->
             <option class="inputSelect" value="">select breed</option>
-            <!-- <option class="inputBreed" value="breed1">{{response.cat.id}}</option>
-            <option class="inputBreed" value="breed2">{{response.cat.id}}</option> -->
+            <option class="inputBreed" value="breed" *ngFor="let breed of galleryService.response; let i = index">
+                {{breed.id}}</option>
         </select>
-        <button type="submit" class="button">
-            <!-- find -->
+        <button type="submit" class="button" (click)="search()">
             <!-- <img src="../../icons/loupe.png" class="loupeIcon" width="40" height="40" fill="grey" /> -->
         </button>
     </form>
 </header>
-
-
-<router-outlet></router-outlet>

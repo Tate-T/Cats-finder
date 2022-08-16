@@ -1,41 +1,21 @@
 import { Component } from "@angular/core"; 
-// import { Component, OnInit } from "@angular/core"; 
-// import { HttpClient } from '@angular/common/http';
-
-// import rates from "../../data/data.json";
+import { GalleryService } from "../shared/gallery.service";
 
 @Component({
     selector: 'app-gallery',
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.css'],
-    // interpolation: ['{{', '}}']
 })
 
-
-
 export class GalleryComponent {
-    response: any
-    // constructor(private http: HttpClient) { }
 
+constructor(public galleryService: GalleryService) {}
     
-
-    // cats: any = this.http.get('../../data/data.json').subscribe((rates: any) => {
-    //     return this.response = {
-    //         : ,
-    //         : ,
-    //     }
-    //   });
-
-    // ngOnInit() {
-    //     getCatsApi().then(response => {
-    //         setImages(response.cats)
-    // }
-
-    //  handleInputChange (event: any) {
-    //     const { value } = event.currentTarget.value;
-    //     this.cat = value;
-    //   };
-    
-    //   getImages () {}
-       
+  getGallery() {
+    if (this.galleryService.findForm.trim() === '') {
+      alert('Enter the name of image');
+      return
+    }
+    return this.galleryService.response[this.galleryService.findForm].image
+  }
 }

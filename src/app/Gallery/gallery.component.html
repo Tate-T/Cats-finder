@@ -1,18 +1,9 @@
 <div class="gallery-conteiner">
-    {{response}}
     <ul class="gallery">
-        <li class="galleryItem" click="onClickImage(largeImageURL)">
-            {{response}}
+        <li class="galleryItem" *ngFor="let item of galleryService.gallery; let i = index">
+            <!-- click="onClickImage(largeImageURL)"> -->
+            {{item.id}}
         </li>
-        <!-- <li class="galleryItem" click="onClickImage(largeImageURL)">
-            <img src={webformatURL} alt="cat" class="galleryItem__image" />
-        </li>
-        <li class="galleryItem" click="onClickImage(largeImageURL)">
-            <img src={webformatURL} alt="cat" class="galleryItem__image" />
-        </li>
-        <li class="galleryItem" click="onClickImage(largeImageURL)">
-            <img src={webformatURL} alt="cat" class="galleryItem__image" />
-        </li> -->
     </ul>
     <button type="button" click="galleryAppear()" class="button">Load more</button>
 </div>
