@@ -13,21 +13,15 @@ export class GalleryService  {
   
   constructor() { }
 
-    public gallery: GalleryItem[] = [
-        {
-          id: '',
-          url: '',
-          width: 0,
-          height: 0
-        }
-      ]
+    public gallery: GalleryItem[] = []
+    public loading: boolean = true;
 
-    findForm: string = '';
+    findForm: GalleryItem[] = [];
 
     response: any = {
-        id: '',
-        url: '',
-        width: 0,
-        height: 0
-    };
+      id: '',
+      url: '',
+      width: 0,
+      height: 0
+  }
 }

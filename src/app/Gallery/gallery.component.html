@@ -1,9 +1,14 @@
-<div class="gallery-conteiner">
-    <ul class="gallery">
+<div class="gallery-conteiner" *ngIf="!galleryService.loading">
+    <ul class="gallery" *ngIf="galleryService.gallery.length; else noGallery">
         <li class="galleryItem" *ngFor="let item of galleryService.gallery; let i = index">
             <!-- click="onClickImage(largeImageURL)"> -->
-            {{item.id}}
+            <img src={{item.url}} />
         </li>
     </ul>
     <button type="button" click="galleryAppear()" class="button">Load more</button>
 </div>
+
+<ng-template #noGallery>
+    <p class="galleryMessage">No cats-images now!</p>
+</ng-template>
+<p *ngIf="galleryService.loading">Loading</p>

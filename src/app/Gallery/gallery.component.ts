@@ -10,12 +10,13 @@ import { GalleryService } from "../shared/gallery.service";
 export class GalleryComponent {
 
 constructor(public galleryService: GalleryService) {}
+
     
   getGallery() {
-    if (this.galleryService.findForm.trim() === '') {
-      alert('Enter the name of image');
+    if (this.galleryService.findForm === []) {
+      alert('Choose a breed of cat');
       return
     }
-    return this.galleryService.response[this.galleryService.findForm].image
+    return this.galleryService.response
   }
 }

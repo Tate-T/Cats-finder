@@ -1,8 +1,8 @@
 <header class="searchbar">
     <h1 class="title">CATS FINDER</h1>
-    <form class="form" submit="ngOnInit()">
-        <select class="inputCatBreed">
-            <!-- <select (change)="search()" class="inputCatBreed"> -->
+    <form class="form" (submit)="ngOnInit()">
+        <!-- <select class="inputCatBreed"> -->
+        <select (change)="search()" class="inputCatBreed">
             <option class="inputSelect" value="">select breed</option>
             <option class="inputBreed" value="breed" *ngFor="let breed of galleryService.response; let i = index">
                 {{breed.id}}</option>
