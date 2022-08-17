@@ -11,12 +11,13 @@ export class GalleryComponent {
 
 constructor(public galleryService: GalleryService) {}
 
-    
-  getGallery() {
-    if (this.galleryService.findForm === []) {
-      alert('Choose a breed of cat');
-      return
-    }
-    return this.galleryService.response
-  }
+galleryAppear(){
+    this.galleryService.gallery.length > 0 && !this.galleryService.loading && (Math.ceil(this.galleryService.total / 9) !== this.galleryService.page - 1) && (this.galleryService.page + 1)
+    if (this.galleryService.page > 1) {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+      }
+}
 }

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/header.component';
 import { GalleryComponent} from './Gallery/gallery.component';
 import { ModalComponent } from './Modal/modal.component';
+// import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     GalleryComponent,
-    ModalComponent
+    ModalComponent,
+    // FormsModule
   ],
   imports: [
     BrowserModule,
