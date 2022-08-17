@@ -11,7 +11,7 @@ export class GalleryComponent {
 constructor(public galleryService: GalleryService) {}
 
 galleryAppear(){
-    this.galleryService.gallery.length > 0 && !this.galleryService.loading && (Math.ceil(this.galleryService.total / 9) !== this.galleryService.page - 1) && (this.galleryService.page + 1)
+    this.galleryService.gallery.length > 0 && !this.galleryService.loading && (Math.ceil(this.galleryService.total / 10) !== this.galleryService.page - 1) && (this.galleryService.page + 1)
     if (this.galleryService.page > 1) {
         window.scrollTo({
             top: document.documentElement.scrollHeight,
