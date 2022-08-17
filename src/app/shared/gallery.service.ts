@@ -22,6 +22,8 @@ export class GalleryService  {
     public image: GalleryItem = {
       id: ''
     }
+    
+public searchBreed: string = ''
     public breeds: Breed[] = []
     public loading: boolean = true;
     public total: number = 0;

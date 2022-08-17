@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/header.component';
 import { GalleryComponent} from './Gallery/gallery.component';
 import { ModalComponent } from './Modal/modal.component';
-// import { FormsModule } from '@angular/forms';
+import { GalleryFilterPipe } from './shared/gallery-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { ModalComponent } from './Modal/modal.component';
     HeaderComponent,
     GalleryComponent,
     ModalComponent,
-    // FormsModule
+    GalleryFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

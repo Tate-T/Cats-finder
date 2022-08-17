@@ -1,6 +1,7 @@
 <div class="gallery-conteiner" *ngIf="!galleryService.loading">
     <ul class="gallery" *ngIf="galleryService.gallery.length; else noGallery">
-        <li class="galleryItem" *ngFor="let item of galleryService.gallery; let i = index">
+        <li class="galleryItem"
+            *ngFor="let item of galleryService.gallery | galleryFilter: galleryService.searchBreed; let i = index">
             <!-- <img src={{item.url}} class="galleryItem__image" /> -->
             <img src={{item.url}} class="galleryItem__image" />
         </li>

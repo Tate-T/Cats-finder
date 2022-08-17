@@ -28,13 +28,14 @@ onChange(): Observable<Breed[]> {
   search(): Observable<GalleryItem[]> {
     // const APIKEY = 'e644a991-0319-4b39-840f-08c4781bc4ad';
     return this.http.get<GalleryItem[]>('https://api.thecatapi.com/v1/images/search?limit=10&page=100&order=Desc')
-    .pipe(tap(gallery => this.galleryService.gallery = gallery))
+    .pipe(tap(gallery => this.galleryService.gallery = gallery));
   }
   
   ngOnInit(): void {
-    this.onChange()
+    
     this.search().subscribe(() => {
       this.galleryService.loading = false
           });
+          this.galleryService.searchBreed = ''
   }
 }

@@ -2,12 +2,14 @@
     <h1 class="title">CATS FINDER</h1>
     <form class="form" (submit)="ngOnInit()">
         <!-- <select (change)="search()" class="inputCatBreed" *ngIf="galleryService.breeds.length; else noBreeds"> -->
-        <select (change)="search()" class="inputCatBreed">
+        <!-- <select (change)="search()" class="inputCatBreed">
             <option class="inputSelect" value="">select breed</option>
-            <option class="inputBreed" value="" *ngFor="let breed of galleryService.breeds" (click)="onChange()">
+            <option class="inputBreed" value="" *ngFor="let breed of galleryService.breeds " [(ngModel)]="searchBreed">
                 {{breed.name}}
             </option>
-        </select>
+        </select> -->
+        <input class="inputCatBreed" type="text" placeholder="Enter the breed of cat..."
+            [(ngModel)]="galleryService.searchBreed" />
         <button type="submit" class="button" (click)="search()">
             <!-- <img src="../../icons/loupe.png" class="loupeIcon" width="40" height="40" fill="grey" /> -->
         </button>

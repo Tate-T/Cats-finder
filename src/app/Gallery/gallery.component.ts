@@ -8,7 +8,6 @@ import { GalleryService } from "../shared/gallery.service";
 })
 
 export class GalleryComponent {
-
 constructor(public galleryService: GalleryService) {}
 
 galleryAppear(){
